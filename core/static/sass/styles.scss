@@ -1,0 +1,65 @@
+// @use 'config';
+// @use 'utilities';
+// @use 'components';
+@use 'abstract';
+
+:root{
+    --blue: #0350a0;
+    --gradient: linear-gradient(to right, #0FCBAB, #00BAC4, #00A5D9, #008CE0, #006ED4, #7048B1);
+    --gradient: linear-gradient(to right, #00FFD4, #00E1E9, #00C0F1, #009DE6, #3C77C8, #7e529b);
+}
+
+body{
+    background-color: white;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 !important;
+}
+
+/* p{
+    background: linear-gradient(to right, #0FCBAB, #00BAC4, #00A5D9, #008CE0, #006ED4, #7048B1);
+    background: linear-gradient(to right, #00FFD4, #00E1E9, #00C0F1, #009DE6, #3C77C8, #7e529b);
+} */
+
+/* button {
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    background: linear-gradient(to right bottom, #00FFD4, #00E1E9, #00C0F1, #009DE6, #3C77C8, #7e529b);
+
+    &:hover{
+        transform: scale(1.1);
+    }
+} */
+
+/* box */
+.box-content {
+    padding:20px;
+    background-color: #EFEFEF;
+}
+
+
+textarea {
+    background-color:#FAFAFA;
+    border:#EFEFEF solid 1px;
+    color:#333;
+    height:150px;
+    width:100%;
+
+}
+/* a {
+    color:#333 !important; 
+} */
+
+
+/* richtext custom style */
+.richText {
+    margin-top: 40px;
+    -webkit-box-shadow: 0 0 20px 0 #999;
+    -moz-box-shadow: 0 0 20px 0 #999;
+    box-shadow: 0 0 20px 0 #999;
+}

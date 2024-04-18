@@ -1,0 +1,34 @@
+{% extends 'admin/partials/base.html' %}
+{% block title %}
+    AMB Ingeniería
+{% endblock %}
+{% block content %}
+
+
+
+<div class="container">
+
+    <textarea class="content" name="example"></textarea>
+    <button class="btn-send">Cargar</button>
+    <div id="output"></div>
+</div>
+    
+
+
+
+{% endblock %}
+{% block extra_scripts %}
+<script>
+    $(()=>{
+        $('.content').richText();
+
+        $('.btn-send').click(()=>{
+            console.log($('.content').val())
+            $('#output').html($('.content').val())
+        })
+
+        $('.jqbtn').button()
+
+    });
+</script>
+{% endblock %}

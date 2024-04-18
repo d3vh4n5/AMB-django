@@ -1,0 +1,32 @@
+@use 'abstract' as *;
+
+:root{
+  font-size: 10px;
+  @include colores();
+  --maxWidth: 1460px;
+  /* Test variables for layout help */
+  // --testBorder: 1px dashed tomato;
+  // --testOutline: 1px dashed blue;
+}
+
+@mixin testStyles(){
+  border: var(--testBorder);
+  outline: var(--testOutline);
+}
+
+*{
+  @include testStyles();
+  box-sizing: border-box;
+  margin: 0;
+}
+html{
+  scroll-behavior: smooth;
+  // scroll-snap-type: y proximity;
+  // scroll-snap-type: y mandatory;
+}
+
+body{
+  background-color: $colorSecundario;
+  overflow-x: hidden;
+  font-family: $fuenteGeneral;
+}

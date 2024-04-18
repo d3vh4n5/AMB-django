@@ -1,0 +1,48 @@
+
+
+$verdeWamnet: #293D41;
+$verdeWamnetClaro: #476970;
+$blanco: #FFFFFF;
+$screenColor: rgb(24, 24, 24);
+
+// Esta función devuelve el color correcto dependiendo el brillo del color que le pasemos como parámetro
+
+@function setTextColor($color){
+    @if (lightness($color) > 40%){
+        @return rgba(0,0,0,.85);
+    } @else {
+        @return $blanco;
+    }
+}
+
+@mixin theme($light-theme: true){
+	@if $light-theme{
+		background: lighten($primary-color, 100%);
+		color: darken($text-color, 100%);
+	}
+}
+
+// al uso:
+
+// .light{
+// 	@include theme($light-theme: true);
+// }
+
+
+@mixin colores(){
+    --colorPrimario: #{$verdeWamnet};
+    --colorPrimarioClaro: #{$verdeWamnetClaro};
+    --colorSecundario: #{$blanco};
+    --colorTexto: #{setTextColor($blanco)};
+    --colorTextoSecundario: #{$blanco};
+    --screenColor: #{$screenColor};
+}
+
+// Variables de color usables posteriormente en sass
+
+$colorPrimario: var(--colorPrimario);
+$colorPrimarioClaro: var(--colorPrimarioClaro);
+$colorSecundario: var(--colorSecundario);
+$colorTextoPrimario: var(--colorTexto);
+$colorTextoSecundario: var(--colorTextoSecundario);
+$colorPantallas: var(--screenColor);

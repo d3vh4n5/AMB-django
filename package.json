@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "watch" : "sass --watch static/sass/styles.scss:static/css/styles.css",
+    "min": "sass --watch static/sass/styles.scss:static/css/styles.min.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.75.0"
+  }
+}
